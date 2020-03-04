@@ -1,0 +1,49 @@
+package Yaman.montadoraMaven2;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TesteCarro {
+    //private Carro carro;
+
+    @Test
+    public void testaCarro1(){
+        Carro carro = new Carro("Mercedez-Benz","Sedan", "CLS200", "Prata");
+        Assert.assertEquals(carro.getVeiculo().getNome(),"Mercedez-Benz");
+        Assert.assertEquals(carro.getVeiculo().getTipo(),"Sedan");
+        Assert.assertEquals(carro.getVeiculo().getModelo(),"CLS200");
+        Assert.assertEquals(carro.getVeiculo().getCor(),"Prata");
+    }
+    
+    
+    @Test
+    public void testaCarro2(){
+    	Carro carro = new Carro("GM","Hatch", "Golf", "Branco");
+        Assert.assertEquals(carro.getVeiculo().getNome(),"GM");
+        Assert.assertEquals(carro.getVeiculo().getTipo(),"Hatch");
+        Assert.assertEquals(carro.getVeiculo().getModelo(),"Golf");
+        Assert.assertEquals(carro.getVeiculo().getCor(),"Branco");
+       
+           }
+
+    @Test
+    public void testaCarro3(){
+        Carro carro= new Carro("Ford","Focus","Hatch","Branco");
+        Assert.assertEquals(carro.getVelocidadeMaxima(), 220.0, 0);
+        Assert.assertEquals(carro.getVeiculo().getNome(),"Ford");
+        Assert.assertEquals(carro.getVeiculo().getTipo(),"Focus");
+        Assert.assertEquals(carro.getVeiculo().getModelo(),"Hatch");
+        Assert.assertEquals(carro.getVeiculo().getCor(),"Branco");
+        Assert.assertEquals(carro.getVelocidadeMaxima(), 220.0, 0);
+        
+       
+    }
+
+   @Test
+   public void testaVelocidade(){
+        Carro carro = new Carro("Ford","Sedan","Focus","Preto");
+        carro.acelerar(200.0);
+        Assert.assertEquals(carro.velocidadeAtual(), 200.0, 0);
+        
+    }
+}

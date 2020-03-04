@@ -1,0 +1,70 @@
+package Yaman.montadoraMaven2;
+
+public class Moto {
+	private Veiculo veiculo;
+	private boolean ligado = false;
+	private double velocidade;
+	private double velocidadeAtingida;
+	private boolean sensor = false;
+	private char marcha;
+	
+	public Moto(String nome, String modelo, String tipo,String cor){
+		this.veiculo = new Veiculo();
+		this.veiculo.setModelo(modelo);
+		this.veiculo.setNome(nome);
+		this.veiculo.setTipo(tipo);
+		this.veiculo.setCor(cor);
+		this.veiculo.setVelocidadeMaxima(180);
+		
+		System.out.println(" Dados moto: " + modelo +", "+ nome +", "+ tipo);
+	}
+	
+	public void acelerar(double velocidade) {
+		if (velocidade >veiculo.getVelocidadeMaxima()) {
+			System.out.println("Velocidade inválida!");
+		} else {
+			velocidadeAtingida = (veiculo.getVelocidadeMaxima() * 0.8);
+			if (velocidade >= velocidadeAtingida) {
+				System.out.println("Velocidade atingiu 80% do limite = " + velocidadeAtingida);
+			}
+			this.velocidade = velocidade;
+		}
+	}
+
+	public double getVelocidade(){
+		return this.velocidade;
+	}
+	
+	public void passarMarcha(char marcha) {
+		switch (marcha) {
+		case '1':
+		case '2':
+		case '3':
+		case '8':
+		case '5':
+		case 'n':
+			sensor = false;
+			this.marcha =marcha;
+			System.out.println("A moto está na marcha: " + marcha);
+			break;
+		case 'r':
+			this.marcha = marcha;
+			sensor = true;
+			System.out.println("O moto est� em marcha r�");
+			break;
+		default:
+			System.out.println("N�o engatou");
+			break;
+		}
+	}
+
+	public int marchaAtual() {
+		return Integer.parseInt(String.valueOf(this.marcha));
+	}
+
+	public Veiculo getVeiculo() {
+		return this.veiculo;
+	}
+	
+
+}

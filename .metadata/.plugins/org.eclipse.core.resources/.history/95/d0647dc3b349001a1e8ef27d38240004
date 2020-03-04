@@ -1,0 +1,13 @@
+package br.com.appName.steps.web;
+
+import cucumber.api.java.pt.Dado;
+
+public class HomeStep {
+	
+	@Dado("^que acesso o site$")
+	public void que_acesso_o_site() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new PendingException();
+	}
+
+}

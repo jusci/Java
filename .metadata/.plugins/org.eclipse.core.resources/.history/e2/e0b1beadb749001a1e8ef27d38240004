@@ -1,0 +1,19 @@
+package br.com.application.name.mobile.funcionalidade;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import br.com.application.name.web.pages.LoginPage;
+
+public class CompleteSeusDados {
+	
+	  private LoginPage loginPage;
+
+	    public CompleteSeusDados() {
+	        this.loginPage = new LoginPage(webDriver);
+	    }
+
+	    public void realizaLogin(){
+	        initializeWebApplication(ChromeDriver::new);
+	    }
+
+}

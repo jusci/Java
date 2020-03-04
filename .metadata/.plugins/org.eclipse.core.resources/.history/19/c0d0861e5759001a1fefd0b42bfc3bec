@@ -1,0 +1,28 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidade.Funcionario;
+
+public class Programa2 {
+	
+	public static void main (String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner (System.in);
+		
+		Funcionario func = new Funcionario();
+		
+		System.out.print("Informe o nome do funcionario:");
+		func.name = sc.next();
+		System.out.print("Informe o salario bruto:");
+		func.salarioBruto=sc.nextDouble();
+		System.out.print("Informe o valor do imposto:");
+		func.imposto = sc.nextDouble();
+		
+		
+		
+		
+	}
+
+}

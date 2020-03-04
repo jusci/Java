@@ -1,0 +1,82 @@
+package Yaman.montadoraMaven2;
+
+public class Caminhao {
+
+	public Veiculo veiculo;
+	private boolean ligado = false;
+	private double velocidade;
+	private char marcha = 'n';
+	private double velocidadeMaxima;
+	private double velocidadeAtingida;
+	private boolean sensor = false;
+
+	public Caminhao(String nome, String tipo, String modelo) {
+		veiculo = new Veiculo();
+		this.veiculo.setNome(nome);
+		this.veiculo.setTipo(tipo);
+		this.veiculo.setModelo(modelo);
+		this.veiculo.setVelocidadeMaxima(200);
+	}
+
+	public void passarMarcha(char marcha) {
+		sensor = false;
+		switch (marcha) {
+		case '1':
+			this.marcha = marcha;
+			System.out.println("O caminhao esta na primeira marcha");
+			break;
+		case '2':
+			this.marcha = marcha;
+			System.out.println("O caminhao esta na segunda marcha");
+			break;
+		case '3':
+			this.marcha = marcha;
+			System.out.println("O caminhao esta na terceira marcha");
+			break;
+		case '4':
+			this.marcha = marcha;
+			System.out.println("O caminhao esta na quarta marcha");
+			break;
+		case '5':
+			this.marcha = marcha;
+			System.out.println("O caminhao esta na quinta marcha");
+			break;
+		case 'n':
+			this.marcha =marcha;
+			System.out.println("O caminhão esta no neutro");
+			break;
+		case 'r':
+			this.marcha = marcha;
+			sensor = true;
+			System.out.println("O caminh�o esta em marcha re");
+			break;
+		default:
+			System.out.println("Nao engatou");
+			break;
+		}
+
+	}
+
+	public void acelerar(double velocidade) {
+		if (velocidade > velocidadeMaxima) {
+			System.out.println("Velocidade inválida!");
+		} else {
+			velocidadeAtingida = (velocidadeMaxima * 0.8);
+			if (velocidade >= velocidadeAtingida) {
+				System.out.println("Velocidade atingiu 80% do limite = " + velocidadeAtingida);
+			}
+			this.velocidade = velocidade;
+		}
+	}
+
+	public boolean getLigado() {
+		return this.ligado;
+	}
+
+	public void status() {
+		System.out.println("Veiculo: " + veiculo.getModelo());
+		System.out.println("Ligado: " + veiculo.getNome());
+		System.out.println("Velocidade: " + veiculo.getTipo());
+	}
+
+}

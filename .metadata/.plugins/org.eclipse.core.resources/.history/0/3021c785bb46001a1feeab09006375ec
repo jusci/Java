@@ -1,0 +1,94 @@
+package Yaman.montadoraMaven2;
+
+public class Trator {
+	
+	public Veiculo veiculo;
+
+	private boolean ligado = false;
+	private double velocidade;
+	private char marcha = 'n';
+	private double velocidadeMaxima;
+	private double velocidadeAtingida;
+	private boolean sensor = false;
+	private boolean subirPa = true;
+	private boolean descerPa = true;
+	
+	public Trator(String nome, String modelo, String tipo,String cor){
+		this.veiculo = new Veiculo();
+		this.veiculo.setModelo(modelo);
+		this.veiculo.setNome(nome);
+		this.veiculo.setTipo(tipo);
+		this.veiculo.setCor(cor);
+		this.veiculo.setVelocidadeMaxima(100);
+
+   }
+	
+	public void passarMarcha(char marcha) { 
+		
+		switch (marcha) {
+		case '1':
+		case '2':
+		case '3':
+		case '8':
+		case '5':
+		case 'n':
+			sensor = false;
+			this.marcha =marcha;
+			System.out.println("A moto está na marcha: " + marcha);
+			break;
+		case 'r':
+			this.marcha = marcha;
+			sensor = true;
+			System.out.println("O moto est� em marcha r�");
+			break;
+		default:
+			System.out.println("N�o engatou");
+			break;
+		}	
+	
+	}
+	
+	public void acelerar(double velocidade) {
+		if (velocidade > velocidadeMaxima) {
+			System.out.println("Velocidade inválida!");
+		} else {
+			velocidadeAtingida = (velocidadeMaxima * 0.8);
+			if (velocidade >= velocidadeAtingida) {
+				System.out.println("Velocidade atingiu 80% do limite = " + velocidadeAtingida);
+			}
+			this.velocidade = velocidade;
+		}
+	}
+
+	public boolean getLigado() {
+		return this.ligado;
+	}
+	
+	public boolean subirPa() {
+		return this.subir;
+
+	}
+	
+	public boolean descerPa() {
+		return this.descer;
+		
+	}
+	
+
+	public void status() {
+		System.out.println("Veiculo: " + veiculo.getModelo());
+		System.out.println("Ligado: " + veiculo.getNome());
+		System.out.println("Velocidade: " + veiculo.getVelocidade());
+		System.out.println("statusPá: " + subir);
+	}
+
+	
+
+
+	
+		
+		
+	  }
+	
+	
+

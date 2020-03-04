@@ -1,0 +1,11 @@
+package br.com.application.name.mobile.funcionalidade;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import br.com.application.name.web.pages.LoginPage;
+
+public class CompleteSeusDados {
+	
+	
+
+}

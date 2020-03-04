@@ -1,0 +1,69 @@
+package Yaman.montadoraMaven2;
+
+/**
+ * @author andre.silva
+ * 
+ */
+public class Veiculo {
+	private String nome;
+	private String tipo;
+	private String modelo;
+	private boolean ligado;
+	private String cor;
+	private double velocidadeMaxima;
+	private double velocidade;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+	
+	public void setModelo(String modelo) {
+	    //this.setVelocidade(200);
+		this.modelo = modelo;
+	}
+
+	public double getVelocidade() {
+		return velocidade;
+	}
+
+	public void setVelocidade(double velocidade) {
+		this.velocidade = velocidade;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+	
+	public double getVelocidadeMaxima() {
+		return velocidadeMaxima;
+		
+	}
+	
+	public void setVelocidadeMaxima(double velocidadeMaxima) {
+		this.velocidadeMaxima = velocidadeMaxima + 50;
+	}
+
+
+
+
+}

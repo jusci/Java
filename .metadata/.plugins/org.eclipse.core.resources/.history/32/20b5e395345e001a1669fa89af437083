@@ -1,0 +1,59 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Conta;
+
+
+
+public class Programa {
+
+	public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Banco Financeiro");
+		System.out.println("Entre com os dados para o cadastro");
+		System.out.print("Informe o número da conta:");
+		int num_conta = sc.nextInt();
+		System.out.print("Informe o nome do titular da conta:");
+		sc.nextLine();
+		String nome = sc.nextLine();
+		
+		
+		
+		
+		System.out.print("Deseja realizar um deposito?(y/n)");
+		char opcao = sc.next().charAt(0);
+		
+		if (opcao == 'y') {
+			
+			System.out.println("Informe o valor do deposito:");
+			double deposito = sc.nextDouble();
+			Conta conta = new Conta()
+			deposito =conta.realizarDeposito(deposito);
+			 System.out.println("Dados da conta:" + conta.toString());
+			
+	}	
+	
+		else {
+			System.out.println("Dados da conta:" + conta.toString());
+		}
+		
+		System.out.println();
+		System.out.println("Informe o valor do saque:");
+		double saque = sc.nextDouble();
+		saque = conta.realizarSaque();
+		System.out.println("Dados da conta atualizado:" + conta.toString());
+		
+		
+		
+		
+		sc.close();
+		
+	}
+
+}

@@ -1,0 +1,9 @@
+#Language: pt
+#enconding: UTF-8
+#version: 1.0
+#author: juscilene.reis
+#date: 07/02/2020
+
+Funcionalidade: Cadastro de usuário
+
+   Cenario: Cadastro com sucesso

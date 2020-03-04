@@ -1,0 +1,19 @@
+package Yaman.montadoraMaven2;
+
+import org.junit.Test;
+
+import Yaman.montadoraMaven2.Carro;
+import junit.framework.Assert;
+
+public class TestaVeiculo {
+
+	@Test
+	public void testeCorVeiculo(){
+		Carro carro = new Carro("Citroen","Hacth", "C4", "Verde");
+		carro.printar();
+		Assert.assertEquals("Citroen", carro.getVeiculo().getNome());
+		
+	}
+}
+
+

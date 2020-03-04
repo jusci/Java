@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class While {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite número inteiros positivos");
+		int num = sc.nextInt();
+		
+
+		while (num != 0) {
+			num = sc.nextInt();
+		}
+			
+		System.out.println("Fim do programa");
+		sc.close();
+		
+	}
+
+}

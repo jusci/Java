@@ -1,0 +1,37 @@
+package br.com.application.name.web.pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CadastroPage {
+
+	@FindBy(id = "nome")
+	private WebElement txNome;
+
+	@FindBy(id = "email")
+	private WebElement txEmail;
+
+	@FindBy(id = "senha")
+	private WebElement txPassword;
+
+	public WebElement getTxNome() {
+		return txNome;
+	}
+
+	public void setTxNome(WebElement txNome) {
+		this.txNome = txNome;
+	}
+
+	public WebElement getTxEmail() {
+		return txEmail;
+	}
+
+
+
+	// **********************getter and setters**********************//
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package br.com.appName.steps.web;
+
+import cucumber.api.java.pt.Dado;
+
+public class CadastroSteps {
+	
+	public class CadastroStep {
+		
+		@Dado("^preencho os dados de cadastro$")
+		public void preencho_os_dados_de_cadastro(){
+		    
+		}
+	}
+
+
+}

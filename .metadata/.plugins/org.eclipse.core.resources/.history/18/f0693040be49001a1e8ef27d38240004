@@ -1,0 +1,16 @@
+package br.com.appName.steps.web;
+
+import cucumber.api.java.pt.Dado;
+
+public class CadastroSteps {
+	
+	public class CadastroStep {
+		
+		@Dado("^efetivo o cadastro$")
+		public void efetivo_o_cadastro(){
+		    
+		}
+	}
+
+
+}

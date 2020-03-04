@@ -1,0 +1,25 @@
+
+public class FuncoesString {
+
+	public static void main(String[] args) {
+		
+		String original = "abcde FGHIJ ABC abc DEFG  ";
+		String s1=original.toLowerCase();//converte caixa alta em miniscula
+		String s2=original.toUpperCase();//converte caixa baixa em maiuscula
+		String s3=original.trim();//elimina os espaços nas extremidades
+		String s4=original.substring(2);//imprimi a partir de uma determinada posição
+		String s5=original.substring(2, 9);
+		String s6=original.replace('a', 'x');
+		
+		
+		System.out.println("Original: " +original);
+		System.out.println(s1  + "Exemplo uma conversaão em minusculo");
+		System.out.println(s2  + "Exemplo uma conversaão em maiusculo");
+		System.out.println(s3  +   "---");
+		System.out.println(s4);
+		System.out.println(s5);
+		System.out.println(s6);
+
+	}
+
+}

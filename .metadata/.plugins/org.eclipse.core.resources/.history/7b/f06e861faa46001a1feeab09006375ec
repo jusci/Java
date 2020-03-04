@@ -1,0 +1,114 @@
+package Yaman.montadoraMaven2;
+
+public class Carro {
+	
+	private Veiculo veiculo;
+	
+	private char marcha = 'N';
+	private boolean ligado = false;
+	private double velocidade;
+	private double velocidadeMaxima;
+	private Veiculo sensor;
+	private boolean automatico = true;
+	private double velocidadeAtingida;
+	
+	
+	public Carro(String nome,String tipo, String modelo, String cor){
+		this.veiculo = new Veiculo();
+		this.veiculo.setNome(nome);
+		this.veiculo.setTipo(tipo);
+		this.veiculo.setModelo(modelo);
+		this.veiculo.setCor(cor);
+		this.veiculo.setVelocidadeMaxima(220);
+	}
+	
+	public void passarMarcha(char marcha){
+		
+		this.marcha = marcha;
+		
+		if (marcha == '1'){
+			System.out.println("O carro esta na terceira marcha");
+		}else if(marcha == '2'){
+			System.out.println("O carro esta na segunda marcha");
+		}else if(marcha == '3'){
+			System.out.println("O carro esta na terceira marcha");
+		}else if(marcha == '4'){
+			System.out.println("O carro esta na quarta marcha");
+		}else if(marcha == '5'){
+			System.out.println("O carro esta na quinta marcha");
+		}else if(marcha == 'n'){
+			System.out.println("O carro esta no neutro");
+		}else if(marcha == 'r'){
+			System.out.println("O carro esta no reverso");
+		}else{
+			System.out.println("Marcha válida");
+		}
+			
+	}
+
+	public double velocidadeAtual() {
+		if (velocidade > velocidadeMaxima) {
+			System.out.println("Velocidade inválida!");
+		} else {
+			velocidadeAtingida = (velocidadeMaxima * 0.8);
+			if (velocidade <= velocidadeAtingida) {
+				System.out.println("Velocidade atingiu 80% do limite = " + velocidadeAtingida);
+			}
+			this.velocidade = velocidade;
+		}
+		return this.velocidade;
+	}
+	
+	public void acelerar(double velocidade){
+		this.velocidade = velocidade;
+	}
+	
+	public void ligar(boolean ligado) {
+		if(ligado){
+			this.ligado = false;
+		    System.out.println("Carro ligado!");
+		}
+		else {
+			this.ligado = true;
+			System.out.println("Carro desligado!");
+		}
+	}
+	
+	public void status(){
+		System.out.println("Nome: " + veiculo.getNome());
+		System.out.println("Modelo: " + veiculo.getModelo());
+		System.out.println("Tipo: " + veiculo.getTipo());	
+	}
+	
+	public boolean getLigado(){
+		return this.ligado;
+	}
+		
+   public void setLigado(boolean ligado) {
+			this.ligado = ligado;
+	}
+   
+   public void printar() {
+   	System.out.print("Nome: " + this.veiculo.getNome() + "\nModelo :" + this.veiculo.getModelo() + "\nLigado :" + this.ligado + "\nCor:" +this.veiculo.getCor());
+   }
+	   
+   public Veiculo getVeiculo(){
+      return this.veiculo;
+     }
+   
+   public void setVeiculo(Veiculo veiculo) {
+	   this.veiculo=veiculo;
+   }
+
+public double getVelocidadeMaxima() {
+	return velocidade;
+	
+}
+
+public void setVelocidadeMaxima(double velocidadeMaxima) {
+	this.velocidade = velocidadeMaxima;
+}
+
+
+	
+}

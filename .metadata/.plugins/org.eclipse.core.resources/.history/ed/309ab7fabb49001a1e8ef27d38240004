@@ -1,0 +1,10 @@
+package br.com.appName.steps.web;
+
+public class CadastroSteps {
+	
+	public class CadastroSteps() {
+		
+		@
+	}
+
+}

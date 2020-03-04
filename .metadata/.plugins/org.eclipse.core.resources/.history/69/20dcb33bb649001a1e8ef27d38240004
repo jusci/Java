@@ -1,0 +1,25 @@
+package br.com.appName.steps.web;
+
+import br.com.application.name.web.funcionalidade.HomeFuncionalidade;
+import cucumber.api.java.pt.Dado;
+
+public class HomeStep {
+	
+	private HomeFuncionalidade homeFuncionalidade;
+	
+	public HomeStep() {
+		this.homeFuncionalidade = new HomeFuncionalidade();
+	}
+	
+	@Dado("^que acesso o site$")
+	public void que_acesso_o_site(){
+	    this.homeFuncionalidade.acessaHome();
+	}
+	
+
+     @Dado("^clico no link \"([^\"]*)\"$")
+     public void clico_no_link(String link) throws Throwable{
+    
+     }
+
+}

@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class While {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Digite número inteiros positivos");
+		int num = sc.nextInt();
+		
+        int soma= 0;
+		while (num != 0) {
+			
+		soma = soma+num;
+		
+		
+			num = sc.nextInt();
+		}
+		System.out.println("Total da soma" +soma);
+		System.out.println("Fim do programa");
+		sc.close();
+		
+	}
+
+}

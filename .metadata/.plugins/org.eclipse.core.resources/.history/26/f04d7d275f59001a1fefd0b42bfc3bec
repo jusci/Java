@@ -1,0 +1,19 @@
+package aplicacao;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entidade.Aluno;
+
+public class Programa3 {
+
+	public static void main ( String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Aluno aluno = new Aluno();
+		
+		
+	}
+}

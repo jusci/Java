@@ -1,0 +1,38 @@
+package Yaman.montadoraMaven2;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+public class TestaMoto {
+
+    @Test
+    public void testaMoto1(){
+        Moto moto = new Moto("Titan","Honda","Funk");
+        Assert.assertEquals(moto.getVeiculo().getNome(),"Titan");
+        //Assert.assertEquals(moto.getVeiculo().getCor(),"Vermelha");
+        Assert.assertEquals(moto.getVeiculo().getModelo(),"Honda");
+        Assert.assertEquals(moto.getVeiculo().getTipo(),"Funk");
+    }
+
+    @Test
+    public void testaMoto2(){
+        Moto moto = new Moto("XRE","Honda","Funk");
+        moto.passarMarcha('3');
+        Assert.assertEquals(moto.getVeiculo().getNome(),"XRE");
+        //Assert.assertEquals(moto.marchaAtual(),"3");
+        //Assert.assertEquals(moto.getVeiculo().getCor(),"Preta");
+        Assert.assertEquals(moto.getVeiculo().getModelo(),"Honda");
+        Assert.assertEquals(moto.getVeiculo().getTipo(),"Funk");
+    }
+
+    @Test
+    public void testeMoto3() {
+        Moto moto = new Moto("Fan","Yamaha","Funk");
+        Assert.assertEquals(moto.getVeiculo().getNome(),"Fan");
+        //Assert.assertEquals(moto.getVeiculo().getCor(),"Preta");
+        Assert.assertEquals(moto.getVeiculo().getModelo(),"Yamaha");
+        Assert.assertEquals(moto.getVeiculo().getTipo(),"Funk");
+    }
+
+
+}
